@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_14_155001) do
+ActiveRecord::Schema.define(version: 2021_10_16_111703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,8 @@ ActiveRecord::Schema.define(version: 2021_10_14_155001) do
     t.text "description"
     t.string "photo_url"
     t.string "duration"
-    t.bigint "booking_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booking_id"], name: "index_courses_on_booking_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,5 +45,4 @@ ActiveRecord::Schema.define(version: 2021_10_14_155001) do
   end
 
   add_foreign_key "bookings", "users"
-  add_foreign_key "courses", "bookings"
 end

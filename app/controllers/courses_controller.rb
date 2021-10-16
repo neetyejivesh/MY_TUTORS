@@ -1,14 +1,26 @@
 class CoursesController < ApplicationController
 
-    def index
-        @courses = Course.all
+  def index
+    if params[:query].present?
+      @courses = Course.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @courses = Course.all
+    end
+  end
+
+      def search
+        @Course = Course.search(params[:search])
       end
+
+
       def new
         @course = Course.new
       end
 
+  
+
       def show
-        @course = course.find(params[:id])
+        @course = Course.find(params[:id])
         @booking = Booking.new
       end
 
