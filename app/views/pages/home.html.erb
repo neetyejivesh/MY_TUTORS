@@ -1,2 +1,16 @@
-<h1> newtitle </h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1> Find your courses below  </h1>
+<p></p>
+
+<!-- [...] -->
+<%= form_tag courses_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a course"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
+
+</div>
