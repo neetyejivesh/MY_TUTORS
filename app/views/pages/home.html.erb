@@ -1,3 +1,17 @@
+<h1> Find your courses below  </h1>
+<p></p>
+
+<!-- [...] -->
+<%= form_tag courses_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a course"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
 <div class="d-flex justify-content-around w-100">
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="http://picsum.photos/400/300" alt="Card image cap">
@@ -20,19 +34,4 @@
 
 </div>
 
-<h1> Find your courses below  </h1>
-<p></p>
 
-<!-- [...] -->
-<%= form_tag courses_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a course"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
-
-
-</div>
