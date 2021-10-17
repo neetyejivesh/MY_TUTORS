@@ -3,9 +3,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def search
-    @user = User.search(params[:search])
-  end
+
 
 
 end
