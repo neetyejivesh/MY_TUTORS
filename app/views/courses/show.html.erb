@@ -12,3 +12,13 @@
 
 </div>
   
+<div class="container">
+  <div class="form-wrapper" style="width:500px margin 0 auto;">
+    <h1>Choose your time</h1>
+  <%= simple_form_for :search, method: :get do |t|  %>
+  <%= t.input :starts_at,as: :string,input_html: { class:"datepicker"} %>
+  <%= t.input :ends_at,as: :string,input_html: { class:"datepicker"}  %>
+  <%= t.submit "Go",class: "btn" %>
+  <% end %>
+  </div>
+</div>
