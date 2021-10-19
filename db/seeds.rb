@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first
 
  
-Course.create( title: "Mathematics Grade 3", description:" Mathematics Courses and tutorials suitable for grade 3 students", photo_url:"https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80", duration:"30 minutes") 
+Course.create( title: "Mathematics Grade 3", description:" Mathematics Courses and tutorials suitable for grad", photo_url:"https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80", duration:"30 minutes")
 Course.create( title: "Mathematics Garde 6", description:"Mathematics Courses and tutorials suitable for grade 6 students", photo_url:"https://images.unsplash.com/photo-1546833998-877b37c2e5c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80", duration:"60 minutes") 
 Course.create( title: "Mathematics Grade 9", description:"Mathematics Courses and tutorials suitable for grade 9 students", photo_url:"https://images.unsplash.com/photo-1560785496-284e257f0bf7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1hdGhzJTIwa2lkc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", duration:"90 minutes") 
 Course.create( title: "Mathematics Grade 12", description:"Mathematics Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1453733190371-0a9bedd82893?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80", duration:"120 minutes") 
@@ -26,6 +26,5 @@ Course.create( title: "Computer Science Grade 3", description:" Computer Science
 Course.create( title: "Computer Science Garde 6", description:"Computer Science Courses and tutorials suitable for grade 6 students", photo_url:"https://images.unsplash.com/photo-1599666520394-50d845fe09c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80", duration:"60 minutes") 
 Course.create( title: "Computer Science Grade 9", description:"Computer Science Courses and tutorials suitable for grade 9 students", photo_url:"https://images.unsplash.com/photo-1536148935331-408321065b18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80", duration:"90 minutes") 
 Course.create( title: "Computer Science Grade 12", description:"Computer Science Courses and tutorials suitable for grade 12 students", photo_url:"https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80", duration:"120 minutes")
-
 
 
