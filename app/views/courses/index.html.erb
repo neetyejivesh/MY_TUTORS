@@ -2,11 +2,19 @@
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div id="courses">
-        <% @courses.each do |course| %>
-          <h4><%= link_to course.title, course_path(course)%></h4>
+        <div class="cards d-flex flex-wrap">
+          <% @courses.each do |course| %>
+           <div class="card w-25" >
+             <%= link_to course_path(course) do %>
+             <h4><%= course.title %></h4>
+              <%= image_tag course.photo_url, alt: "alttext", class: "w-100" %>
+              <% end %>
+            </div>
+
           
           
         <% end %>
+        </div>
       </div>
     </div>
   </div>
