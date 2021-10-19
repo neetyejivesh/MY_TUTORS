@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get '/search' => 'pages#search', :as => 'search_page'
   resources :courses
+  resources :bookings, only: [:index, :create, :show, :destroy]
 end
