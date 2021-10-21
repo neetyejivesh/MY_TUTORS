@@ -30,16 +30,20 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <!-- Insert form here -->
+
+
+
+
+
+
+
+
+
+
   <div class="form-wrapper" style="width:500px margin 0 auto;">
     <h1>Choose your time</h1>
   <%= simple_form_for :search, method: :get do |t|  %>
@@ -47,5 +51,10 @@
   <%= t.input :ends_at,as: :string,input_html: { class:"datepicker"}  %>
   <%= t.submit "Go",class: "btn" %>
   <% end %>
+</div>
+
+
+
+    </div>
   </div>
 </div>

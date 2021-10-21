@@ -1,21 +1,20 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <div id="courses">
-        <div class="cards d-flex flex-wrap">
-          <% @courses.each do |course| %>
-           <div class="card w-25" >
-             <%= link_to course_path(course) do %>
-             <h4><%= course.title %></h4>
-              <%= image_tag course.photo_url, alt: "alttext", class: "w-100" %>
-              <% end %>
+  <h1>Our <span>course</span> list</h1>
+    <h4>Take a look at our best courses:</h4>
+  <div class="d-flex row justify-content-center">
+    <% @courses.each do |course| %>
+      <div class="col-lg-4">
+        <div class="card bg-light my-3">
+          <%= image_tag(course.photo_url, height: 300) %>
+          <div class="card-body d-flex align-items-center">
+            <div class="">
+              <h3 class="card-title fw-bolder"> <%= course.title %> </h3>
             </div>
-
-          
-          
-        <% end %>
+          </div>
+          <div class="card-body">
+            <%= link_to "Learn more",  course_path(course), class: "btn btn-booknow card-link"%>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
-</div>
