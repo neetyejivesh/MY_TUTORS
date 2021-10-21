@@ -42,15 +42,21 @@
 
 
 
-
-
-  <div class="form-wrapper" style="width:500px margin 0 auto;">
-    <h1>Choose your time</h1>
-  <%= simple_form_for :search, method: :get do |t|  %>
-  <%= t.input :starts_at,as: :string,input_html: { class:"datepicker"} %>
-  <%= t.input :ends_at,as: :string,input_html: { class:"datepicker"}  %>
-  <%= t.submit "Go",class: "btn" %>
-  <% end %>
+<div class="container">
+  <div class="form-wrapper">
+    <h2>Book a Course</h2>
+    <%= simple_form_for [@course, @booking] do |f| %>
+      <%= f.input :start_date, label: "Sélectionnez vos dates:",
+                               as: :string,
+                               required: false,
+                               input_html: { id: "range_start"} %>
+      <%= f.input :end_date, label: false,
+                             as: :string,
+                             required: false,
+                             input_html: { id: "range_end" } %>
+      <%= f.button :submit, "Book", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 
 
@@ -58,3 +64,6 @@
     </div>
   </div>
 </div>
+
+<div id="booking-form-div"
+     data-bookings="<%= @bookings_dates.to_json %>">

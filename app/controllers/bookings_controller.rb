@@ -9,10 +9,10 @@ class BookingsController < ApplicationController
       end
 
       def create
-        @course = Course.find(params[:booking][:course_id])
+        @course = Course.find(params[:course_id])
         @booking = Booking.new(booking_params)
-        @booking.date = get_booking_date(booking_params)
         @booking.user = current_user
+        @booking.course = @course
         if @booking.save
           flash[:notice] = 'Course has been successfully booked'
           redirect_to courses_path
@@ -20,6 +20,10 @@ class BookingsController < ApplicationController
           render 'course/show'
         end
       end
+
+
+
+
       
       def destroy
         @booking = Booking.find(params[:id])
@@ -39,7 +43,7 @@ class BookingsController < ApplicationController
       end
 
       def booking_params
-        params.require(:booking).permit(:course_id, :date)
+        params.require(:booking).permit(:start_date, :end_date)
       end
 
 
