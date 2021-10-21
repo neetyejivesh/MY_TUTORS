@@ -16,9 +16,24 @@ class CoursesController < ApplicationController
   end
 
   def show
-    set_course
     @booking = Booking.new
+    @course           = Course.find(params[:id])
+    @bookings          = @course.bookings 
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
+
+
+
+
+
+
+
+
 
   def create
     @course = Course.new(course_params)
