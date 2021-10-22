@@ -1,52 +1,25 @@
-<%= @course.title %>
-
-<div class="container">
-
-<div class="cards d-flex justify-center w-100">
-  <div class="card" style="width: 9rem;">
-    <img class="card-img-top" src="<%= @course.photo_url %>
+<body class="text-center">
+<div><h1> </h1></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="card ">
+          <h1><%= @course.title %></h1>
+            <img class="card-img-top" src="<%= @course.photo_url %>
 " alt="Card image cap">
-    <div class="card-body">
+              <div class="card-body">
       <p class="card-text"> <%= @course.description  %>  </p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quas at tempore assumenda. Vitae velit est sunt libero pariatur vel consectetur numquam, dolores mollitia odit tempore suscipit facilis non esse!</p>
     </div>
-  </div>
-
-    </div>
-</div>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-      <!-- Insert form here -->
-
-
-
-
-
-
-
-
-<div class="container">
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card2 ">
+            <div class="container">
   <div class="form-wrapper">
-    <h2>Book a Course</h2>
-    <%= simple_form_for [@course, @booking] do |f| %>
-      <%= f.input :start_date, label: "Sélectionnez vos dates:",
+    <h2><strong>Book a Course</strong></h2>
+    <%= simple_form_for [@course,@booking] do |f| %>
+      <%= f.input :start_date, label: "Choose your dates:",
                                as: :string,
                                required: false,
                                input_html: { id: "range_start"} %>
@@ -58,12 +31,33 @@
     <% end %>
   </div>
 </div>
-
-
-
-    </div>
-  </div>
-</div>
-
 <div id="booking-form-div"
      data-bookings="<%= @bookings_dates.to_json %>">
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+    <style>
+      h1{
+        color: grey;
+        margin: 5px;
+      }
+       h2 {
+        color: rgba(86,61,124,.3);
+        margin: 25px;
+      }
+      .card {
+        padding: 25px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+      }
+      .card{
+        height:80vh;
+      }
+      .form-control {
+        height: 5rem !important;
+        font-size: 1.7rem !important;
+        width: 31rem;
+    }
+    </style>
