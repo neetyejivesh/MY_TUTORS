@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
     def index
-        @bookings = Booking.all
+        @bookings = current_user.bookings
       end
 
       def new
@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
         @booking.course = @course
         if @booking.save
           flash[:notice] = 'Course has been successfully booked'
-          redirect_to courses_path
+          redirect_to bookings_path
         else
           render 'course/show'
         end
