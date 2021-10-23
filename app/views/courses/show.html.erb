@@ -1,63 +1,75 @@
-<body class="text-center">
 <div><h1> </h1></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-8">
-          <div class="card ">
-          <h1><%= @course.title %></h1>
-            <img class="card-img-top" src="<%= @course.photo_url %>
-" alt="Card image cap">
-              <div class="card-body">
-      <p class="card-text"> <%= @course.description  %>  </p>
-      <p>The course includes a lot of grammer exercises to help students improve their writing as well as their communication skills.</p>
-    </div>
-          </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card ">
+        <h1><%= @course.title %></h1>
+        <img class="card-img-top" src="<%= @course.photo_url %>
+        " alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"> <%= @course.description  %>  </p>
+          <p>The course includes a lot of grammer exercises to help students improve their writing as well as their communication skills.</p>
         </div>
-        <div class="col-12 col-lg-4">
-          <div class="card2 ">
-            <div class="container">
-  <div class="form-wrapper">
-    <h2><strong>Book a Course</strong></h2>
-    <%= simple_form_for [@course,@booking] do |f| %>
-      <%= f.input :start_date, label: "Choose your dates:",
-                               as: :string,
-                               required: false,
-                               input_html: { id: "range_start"} %>
-      <%= f.input :end_date, label: false,
-                             as: :string,
-                             required: false,
-                             input_html: { id: "range_end" } %>
-      <%= f.button :submit, "Book", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-<div id="booking-form-div"
-     data-bookings="<%= @bookings_dates.to_json %>">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card2 ">
+        <div class="container">
+          <div class="form-wrapper">
+
+            <h2><strong>Book a Course</strong></h2>
+            <%= simple_form_for [@course,@booking] do |f| %>
+            <%= f.input :start_date, label: "Choose your dates:",
+              as: :string,
+              required: false,
+              input_html: { id: "range_start"} %>
+            <%= f.input :end_date, label: false,
+               as: :string,
+               required: false,
+               input_html: { id: "range_end" } %>
+            <%= f.button :submit, "Book", class: "btn btn-primary" %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
-</body>
-    <style>
-      h1{
-        color: grey;
-        margin: 5px;
-      }
-       h2 {
-        color: rgba(86,61,124,.3);
-        margin: 25px;
-      }
-      .card {
-        padding: 25px;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-      }
-      .card{
-        height:80vh;
-      }
-      .form-control {
-        height: 5rem !important;
-        font-size: 1.7rem !important;
-        width: 31rem;
-    }
-    </style>
+  </div>
+</div>
+
+<div id="booking-form-div"
+  data-bookings="<%= @bookings_dates.to_json %>">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
