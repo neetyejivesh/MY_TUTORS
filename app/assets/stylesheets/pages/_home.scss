@@ -47,13 +47,18 @@ html{
   color:#d3ad7f;
   text-transform: uppercase;
 }
+
+.booklist {
+  font-size: medium;
+}
 .btn{
   margin-top: 1rem;
-  display: inline-block;
+  margin-right: 1rem;
+  // display: inline-block;
   padding:.9rem 3rem;
   font-size: 1.7rem;
   color:#fff;
-  background: grey;
+  background: rgb(15, 98, 56);
   cursor: pointer;
 }
 .btn:hover{
